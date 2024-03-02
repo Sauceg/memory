@@ -1,0 +1,32 @@
+### 1. Pygame Initialization and Setup
+- You initialize Pygame modules and set up the display window.
+- The `main()` function initializes the game, sets up the display window, creates a `Game` object, and starts the main game loop.
+
+### 2. `Game` Class
+- The `Game` class represents the main game object.
+- It manages game-specific attributes such as the board size, score, matched tiles, and image list.
+- The `load_images()` method loads images from files and populates the image list. It doubles the images so that there are pairs for matching.
+- The `create_board()` method creates the game board, initializing tiles with images from the image list.
+- The `play()` method is the main game loop where events are handled, the game is drawn, and updates are made.
+- The `handle_events()` method manages user events such as clicking the close button or clicking on tiles.
+- The `draw()` method draws all game objects, including tiles, score, and the game board.
+- The `update()` method updates the game state, including checking for matched pairs and updating the score.
+- The `decide_continue()` method checks whether the game should continue based on whether all tiles have been matched.
+
+### 3. `Tile` Class
+- The `Tile` class represents individual tiles on the game board.
+- Each tile has attributes such as position, image, and whether it's hidden or revealed.
+- The `select()` method checks if a tile has been clicked.
+- The `set_hidden()` method sets the visibility of the tile.
+- The `is_hidden()` method checks if the tile is hidden.
+- The `draw()` method draws the tile on the game surface, either showing its image or a hidden image.
+
+### 4. Functionality
+- Players click on tiles to reveal them and attempt to match pairs of images.
+- If two tiles are revealed, the game checks if they match. If they do, they remain revealed; otherwise, they are hidden again after a short delay.
+- The game ends when all tiles have been matched, and the player's score is displayed.
+
+### 5. Main Execution
+- The `main()` function initializes the game and starts the main game loop.
+
+Overall, your code provides a solid foundation for implementing a memory matching game using Pygame. It's structured and modular, making it easy to understand and extend. You may consider adding more features like sound effects, multiple levels, or a timer to enhance the gameplay further.
